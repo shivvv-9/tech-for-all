@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BridgeGap – Technology Made Easy</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;700;800&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">🌉</div>
+            <span>BridgeGap</span>
+        </div>
+
+        <div class="nav-links">
+
+            <button class="nav-link active" onclick="showSection('home')">
+                🏠 <span data-key="nav_home">Home</span>
+            </button>
+
+            <button class="nav-link" onclick="showSection('guides')">
+                📖 <span data-key="nav_guides">Guides</span>
+            </button>
+
+            <button class="nav-link" onclick="showSection('scams')">
+                ⚠️ <span data-key="nav_scams">Stay Safe</span>
+            </button>
+
+            <button class="nav-link" onclick="showSection('bot')">
+                🤖 <span data-key="nav_bot">BridgeBot</span>
+            </button>
+
+            <button class="nav-emergency" onclick="showSection('emergency')">
+                🆘 <span data-key="nav_emergency">Emergency</span>
+            </button>
+
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <button onclick="showSection('home');toggleMenu()">🏠 Home</button>
+        <button onclick="showSection('guides');toggleMenu()">📖 Guides</button>
+        <button onclick="showSection('scams');toggleMenu()">⚠️ Stay Safe</button>
+        <button onclick="showSection('bot');toggleMenu()">🤖 BridgeBot</button>
+        <button onclick="showSection('emergency');toggleMenu()">🆘 Emergency</button>
+
+    </div>
+
+
+    <!-- ================= LANGUAGE + ACCESSIBILITY ================= -->
+
+    <div class="accessibility-panel">
+
+        <div class="language-row">
+
+            <span class="language-label">
+                🌐 Select Language / भाषा चुनें / భాష ఎంచుకోండి
+            </span>
+
+            <button class="lang-btn active" id="lang-en" onclick="setLang('en')">
+                English
+            </button>
+
+            <button class="lang-btn" id="lang-hi" onclick="setLang('hi')">
+                हिंदी
+            </button>
+
+            <button class="lang-btn" id="lang-te" onclick="setLang('te')">
+                తెలుగు
+            </button>
+
+        </div>
+
+
+        <div class="access-title">
+            ♿ Easy Access & Accessibility
+        </div>
+
+        <div class="access-buttons">
+
+            <button class="access-btn read-btn" onclick="readPage()">
+                🔊 Read Page
+            </button>
+
+            <button class="access-btn voice-btn" onclick="startVoiceCommand()">
+                🎤 Voice Command
+            </button>
+
+            <button class="access-btn" onclick="readLastAnswer()">
+                🔈 Read Answer
+            </button>
+
+            <button class="access-btn" onclick="increaseText()">
+                🔎 Text +
+            </button>
+
+            <button class="access-btn" onclick="decreaseText()">
+                🔍 Text −
+            </button>
+
+            <button class="access-btn" onclick="toggleContrast()">
+                👓 High Contrast
+            </button>
+
+            <button class="access-btn senior-btn" onclick="toggleSeniorMode()">
+                🧓 Senior Mode
+            </button>
+
+            <button class="access-btn stop-btn" onclick="stopSpeaking()">
+                ⏹️ Stop Voice
+            </button>
+
+        </div>
+
+        <div id="voiceStatus" class="voice-status">
+            🎤 Voice assistant is ready.
+        </div>
+
+    </div>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="section active" id="home">
+
+        <div class="hero">
+
+            <div class="hero-tag">
+                🇮🇳 Made for Senior Citizens of India
+            </div>
+
+            <h1>
+                Technology Made Easy
+                <br>
+                Just for You 💙
+            </h1>
+
+            <p>
+                BridgeGap helps you learn smartphones, apps and online
+                services — step by step, in simple language.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button class="btn-primary" onclick="showSection('guides')">
+                    📖 Start Learning
+                </button>
+
+                <button class="btn-secondary" onclick="showSection('scams')">
+                    🛡️ Stay Safe from Scams
+                </button>
+
+                <button class="btn-danger" onclick="showSection('emergency')">
+                    🆘 Emergency Help
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+
+        <div class="features-grid">
+
+            <div class="feature-card" onclick="showSection('guides')">
+                <span>📱</span>
+                <h3>Easy Step-by-Step Guides</h3>
+                <p>
+                    Learn WhatsApp, UPI payments, video calls and more.
+                </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('scams')">
+                <span>🛡️</span>
+                <h3>Scam Awareness</h3>
+                <p>
+                    Learn about OTP fraud, fake KYC calls and lottery scams.
+                </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('bot')">
+                <span>🤖</span>
+                <h3>BridgeBot Assistant</h3>
+                <p>
+                    Ask questions and get simple answers.
+                </p>
+            </div>
+
+            <div class="feature-card" onclick="showSection('emergency')">
+                <span>🆘</span>
+                <h3>Emergency Help</h3>
+                <p>
+                    Quick access to Cyber Crime Helpline 1930.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>🌐</span>
+                <h3>3 Languages</h3>
+                <p>
+                    English, Hindi and Telugu.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>♿</span>
+                <h3>Accessibility</h3>
+                <p>
+                    Voice commands, read aloud and senior-friendly controls.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GUIDES ================= -->
+
+    <section class="section" id="guides">
+
+        <h2 class="section-title">
+            📖 Step-by-Step Guides
+        </h2>
+
+        <p class="section-subtitle">
+            Select a topic below to start learning
+        </p>
+
+
+        <div class="guides-grid">
+
+            <button class="guide-btn" onclick="openGuide('whatsapp')">
+                💬 WhatsApp
+            </button>
+
+            <button class="guide-btn" onclick="openGuide('upi')">
+                💳 UPI Payments
+            </button>
+
+            <button class="guide-btn" onclick="openGuide('netbanking')">
+                🏦 Net Banking
+            </button>
+
+            <button class="guide-btn" onclick="openGuide('video')">
+                📹 Video Calling
+            </button>
+
+            <button class="guide-btn" onclick="openGuide('youtube')">
+                ▶️ YouTube
+            </button>
+
+            <button class="guide-btn" onclick="openGuide('doctor')">
+                🏥 Book Doctor
+            </button>
+
+        </div>
+
+
+        <div id="guideViewer" class="guide-viewer hidden">
+
+            <button class="back-btn" onclick="closeGuide()">
+                ← Back to Guides
+            </button>
+
+            <div id="guideContent"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STAY SAFE ================= -->
+
+    <section class="section" id="scams">
+
+        <h2 class="section-title">
+            ⚠️ Stay Safe from Online Scams
+        </h2>
+
+        <p class="section-subtitle">
+            Learn to recognise and avoid common online frauds.
+        </p>
+
+
+        <div class="golden-rule">
+
+            🔒
+
+            <div>
+                <strong>Golden Rule:</strong>
+                <p>
+                    Never share your OTP, UPI PIN, bank password or
+                    confidential information with anyone.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="safety-grid">
+
+            <div class="safety-card">
+                <h3>🔐 OTP Fraud</h3>
+
+                <p>
+                    Someone may call pretending to be a bank employee
+                    and ask for your OTP.
+                </p>
+
+                <div class="do">
+                    ✅ DO: End the call and contact your bank yourself.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Share your OTP with anyone.
+                </div>
+            </div>
+
+
+            <div class="safety-card">
+                <h3>🏦 Fake KYC Calls</h3>
+
+                <p>
+                    Fraudsters may say your bank account will be blocked
+                    unless you provide information immediately.
+                </p>
+
+                <div class="do">
+                    ✅ DO: Verify through your official bank app.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Download unknown applications.
+                </div>
+            </div>
+
+
+            <div class="safety-card">
+                <h3>🎁 Lottery Scams</h3>
+
+                <p>
+                    Messages claiming that you won a lottery are commonly
+                    used to steal money.
+                </p>
+
+                <div class="do">
+                    ✅ DO: Ignore and report the message.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Pay money to claim a prize.
+                </div>
+            </div>
+
+
+            <div class="safety-card">
+                <h3>📱 WhatsApp Family Scam</h3>
+
+                <p>
+                    Someone may pretend to be your child or relative
+                    and urgently ask for money.
+                </p>
+
+                <div class="do">
+                    ✅ DO: Call the person on their known number.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Send money immediately.
+                </div>
+            </div>
+
+
+            <div class="safety-card">
+                <h3>💳 UPI Scam</h3>
+
+                <p>
+                    Remember: you don't need to enter your UPI PIN
+                    to receive money.
+                </p>
+
+                <div class="do">
+                    ✅ DO: Verify the receiver's name.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Enter your PIN to receive money.
+                </div>
+            </div>
+
+
+            <div class="safety-card">
+                <h3>🖥️ Screen Sharing Scam</h3>
+
+                <p>
+                    Fraudsters may ask you to install an app that lets
+                    them control or view your phone.
+                </p>
+
+                <div class="do">
+                    ✅ DO: Refuse unknown screen-sharing requests.
+                </div>
+
+                <div class="dont">
+                    ❌ DON'T: Give strangers remote access.
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="safety-bottom">
+
+            <h3>🚨 Remember These Rules</h3>
+
+            <ul>
+                <li>Never share OTP.</li>
+                <li>Never share your UPI PIN.</li>
+                <li>Never share your ATM PIN.</li>
+                <li>Never install unknown apps.</li>
+                <li>Never click suspicious links.</li>
+                <li>Always verify before sending money.</li>
+                <li>When in doubt, ask a trusted family member.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BRIDGEBOT ================= -->
+
+    <section class="section" id="bot">
+
+        <h2 class="section-title">
+            🤖 BridgeBot Assistant
+        </h2>
+
+        <p class="section-subtitle">
+            Ask your question or choose an option below.
+        </p>
+
+
+        <div class="bot-status">
+            🟢 BridgeBot is online and ready to help!
+        </div>
+
+
+        <!-- QUICK OPTIONS -->
+
+        <div class="bot-options">
+
+            <button onclick="botOption('phonepe')">
+                💳
+                <span>PhonePe Payment</span>
+            </button>
+
+            <button onclick="botOption('video')">
+                📹
+                <span>Video Call</span>
+            </button>
+
+            <button onclick="botOption('doctor')">
+                🏥
+                <span>Book Doctor</span>
+            </button>
+
+            <button onclick="botOption('scam')">
+                ⚠️
+                <span>Is this a Scam?</span>
+            </button>
+
+            <button onclick="botOption('youtube')">
+                ▶️
+                <span>YouTube Help</span>
+            </button>
+
+            <button onclick="botOption('whatsapp')">
+                💬
+                <span>WhatsApp Help</span>
+            </button>
+
+            <button onclick="botOption('balance')">
+                🏦
+                <span>Bank Balance</span>
+            </button>
+
+            <button onclick="botOption('safety')">
+                🔐
+                <span>Online Safety</span>
+            </button>
+
+        </div>
+
+
+        <!-- CHAT -->
+
+        <div class="chat-window">
+
+            <div class="chat-messages" id="chatBox">
+
+                <div class="message bot">
+                    <div class="bubble">
+                        👋 Hello! I am BridgeBot.
+                        <br><br>
+                        I can help you with PhonePe, WhatsApp,
+                        video calls, YouTube, online scams and more.
+                        <br><br>
+                        Choose an option above or type your question below.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-row">
+
+                <input type="text" id="userInput" class="chat-input" placeholder="Type your question here..."
+                    onkeydown="handleEnter(event)">
+
+                <button class="send-btn" onclick="sendMessage()">
+                    ➤
+                </button>
+
+                <button class="mic-btn" onclick="startVoiceCommand()">
+                    🎤
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EMERGENCY ================= -->
+
+    <section class="section" id="emergency">
+
+        <div class="emergency-container">
+
+            <div class="emergency-icon">
+                🆘
+            </div>
+
+            <h2>
+                Emergency Help
+            </h2>
+
+            <p>
+                If you have been cheated online or experienced
+                financial cyber fraud, report it immediately.
+            </p>
+
+            <div class="helpline">
+                1930
+            </div>
+
+            <p>
+                National Cyber Crime Helpline
+            </p>
+
+            <a href="tel:1930" class="call-btn">
+                📞 Call 1930 Now
+            </a>
+
+
+            <div class="emergency-steps">
+
+                <h3>
+                    🔴 What to do if you get scammed
+                </h3>
+
+                <p>1️⃣ Stay calm and don't make further payments.</p>
+
+                <p>2️⃣ Call Cyber Crime Helpline <strong>1930</strong>.</p>
+
+                <p>3️⃣ Contact your bank and block your card if necessary.</p>
+
+                <p>4️⃣ Take screenshots of suspicious messages.</p>
+
+                <p>5️⃣ Tell a trusted family member.</p>
+
+                <p>6️⃣ Report the incident to the appropriate authorities.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            ❤️ Built with care by students, for the people who raised us.
+        </p>
+
+        <p>
+            BridgeGap — Technology Made Easy for Senior Citizens
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
